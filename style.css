@@ -1,0 +1,176 @@
+body 
+{
+  background-color: #111;
+  color: #fff;
+}
+
+.navbar 
+{
+  display: flex;
+  padding: 20px 0;
+  color: white;
+}
+
+.navbar img 
+{
+  height: 50px;
+  margin-right: 70px;
+}
+
+.nav-item 
+{
+  position: relative;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.hero 
+{
+  position: relative;
+  background: url('Index.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: flex-end;   
+  justify-content: flex-start; 
+  padding: 20px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero::before 
+{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero > div 
+{
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+}
+
+.movie-img 
+{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.section-title 
+{
+  margin: 20px 0 10px 0;
+}
+
+footer 
+{
+  background-color: #000;
+  color: #aaa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.modal-body img 
+{
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    color: #b3dff2;
+    text-decoration: none;
+    font-size: 1.25rem; 
+    transition: color 0.3s ease;
+  }
+
+  .link-arrow span {
+    color: #fff; 
+    margin-right: 6px;
+  }
+
+  .link-arrow:hover {
+    color: #66c8f2; 
+  }
+
+@media (max-width: 1024px) 
+{
+  .navbar 
+  {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .hero 
+  {
+    height: auto;
+    padding: 60px 30px;
+  }
+
+  .hero > div 
+  {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) 
+{
+  .hero 
+  {
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top center; 
+    height: auto;
+    padding: 100px 15px 60px 15px; 
+  }
+
+  .hero > div 
+  {
+    max-width: 100%;
+  }
+
+  .navbar img 
+  {
+    margin-right: 20px;
+  }
+
+  .nav-item 
+  {
+    margin: 10px;
+  }
+}
+.movie-card 
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-info-box 
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.movie-card:hover .movie-info-box 
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
